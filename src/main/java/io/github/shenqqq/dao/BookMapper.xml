@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.shenqqq.dao.BookMapper">
+    <insert id="addBook" parameterType="Books">
+        insert into library.book(bookName,bookCounts,detail)
+        values(#{bookName},#{bookCounts},#{detail});
+    </insert>
+    
+    <delete id="deleteBookById" parameterType="int">
+        delete from library.book where bookID = #{bookId}
+    </delete>
+
+    <update id="update" parameterType="Books">
+        update library.book set
+        bookName=#{bookName},bookCounts=#{bookCounts},detail=#{detail}
+        where bookId=#{bookId}
+    </update>
+
+    <select id="queryBookById" resultType="Books">
+        select * from library.book where bookId=#{bookId}
+    </select>
+
+    <select id="queryAllBook" resultType="Books">
+        select * from library.book
+    </select>
+
+    <select id="queryBookByName" resultType="Books">
+        select * from library.book where bookName=#{bookName}
+    </select>
+</mapper>
