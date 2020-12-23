@@ -8,6 +8,7 @@
     用户名：<input type="text" name="username"> <br>
     密码：<input type="password" name="pwd"> <br>
     <input type="submit" value="提交">
+    <span style="color:#ff0000; font-weight: bold">${error}</span>
 </form>
 </body>
 </html>

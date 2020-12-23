@@ -15,6 +15,7 @@
     <a href="${pageContext.request.contextPath}/user/book/listBook">
         进入书籍界面
     </a>
+    <br>
     <a href="${pageContext.request.contextPath}/user/student/listStudent">
         进入学生界面
     </a>

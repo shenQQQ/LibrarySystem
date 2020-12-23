@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.shenqqq.dao.StudentMapper">
+    <insert id="addStudent" parameterType="Students">
+        insert into library.student(studentID,studentName,age)
+        values(#{studentID},#{studentName},#{age});
+    </insert>
+
+    <delete id="deleteStudentById" parameterType="String">
+        delete from library.student where studentID = #{studentID}
+    </delete>
+
+    <update id="updateStudent" parameterType="Students">
+        update library.student set
+                    studentID=#{studentID},studentName=#{studentName},age=#{age}
+        where studentID=#{studentID}
+    </update>
+
+    <select id="queryStudentById" resultType="Students">
+        select * from library.student where studentID=#{studentID}
+    </select>
+
+    <select id="queryAllStudent" resultType="Students">
+        select * from library.student
+    </select>
+
+    <select id="queryStudentByName" resultType="Students">
+        select * from library.student where studentName=#{studentName}
+    </select>
+</mapper>
