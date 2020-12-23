@@ -19,5 +19,11 @@
     </bean>
 
     <context:component-scan base-package="io.github.shenqqq.controller"/>
-
+    
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/user/**"/>
+            <bean class="io.github.shenqqq.config.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

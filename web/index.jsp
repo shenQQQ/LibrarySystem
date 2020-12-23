@@ -12,8 +12,8 @@
 </head>
   <body>
   <h1>
-    <a href="${pageContext.request.contextPath}/book/list">
-      进入书籍界面
+    <a href="${pageContext.request.contextPath}/user/goLogin">
+      登录界面
     </a>
   </h1>
 </body>
