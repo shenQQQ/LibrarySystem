@@ -13,17 +13,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/book")
+@RequestMapping("/user/book")
 public class BookController {
     @Autowired
     @Qualifier("BookServiceImpl")
     private BookService bookService;
 
-    @RequestMapping("/list")
+    @RequestMapping("/listBook")
     public String list(Model model) {
         List<Books> bookList = bookService.queryAllBook();
         model.addAttribute("list", bookList);
-        return "list";
+        return "listBook";
     }
 
     @RequestMapping("/toAddBook")
@@ -38,7 +38,7 @@ public class BookController {
         if(num!=0){
             System.out.println("添加成功");
         }
-        return "redirect:/book/list";
+        return "redirect:/user/book/listBook";
     }
 
     @RequestMapping("/toUpdateBook")
@@ -54,13 +54,13 @@ public class BookController {
         if(num!=0){
             System.out.println("修改成功");
         }
-        return "redirect:/book/list";
+        return "redirect:/user/book/listBook";
     }
 
     @RequestMapping("/deleteBook/{bookId}")
     public String deleteBook(@PathVariable("bookId") int id){
         bookService.deleteBookById(id);
-        return "redirect:/book/list";
+        return "redirect:/user/book/listBook";
     }
 
     @RequestMapping("/queryBook")
@@ -74,6 +74,6 @@ public class BookController {
             model.addAttribute("error", "未找到");
         }
         model.addAttribute("list", list);
-        return "list";
+        return "listBook";
     }
 }

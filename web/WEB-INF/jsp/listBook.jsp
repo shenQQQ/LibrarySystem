@@ -21,11 +21,11 @@
 
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-xs-4" style="float: left">
-                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增</a>
-                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/list">显示全部书籍</a>
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/user/book/toAddBook">新增</a>
+                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/user/book/listBook">显示全部书籍</a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-6" style="float: right;display: inline-block">
-                    <form action="${pageContext.request.contextPath}/book/queryBook" method="post"  >
+                    <form action="${pageContext.request.contextPath}/user/book/queryBook" method="post"  >
                         <span style="color:#ff0000; font-weight: bold">${error}</span>
                         <input type="submit" value="查询" class="btn btn-primary" style="float: right">
                         <input type="text" name="queryBookName" class="form-control" placeholder="请输入要查询的数据名称" style="width:80%;float: right">
@@ -57,9 +57,9 @@
                         <td>${books.bookName}</td>
                         <td>${books.bookCounts}</td>
                         <td>${books.detail}</td>
-                        <td><a href="${pageContext.request.contextPath}/book/toUpdateBook?id=${books.bookID}">修改</a>
+                        <td><a href="${pageContext.request.contextPath}/user/book/toUpdateBook?id=${books.bookID}">修改</a>
                             &nbsp;|&nbsp;
-                            <a href="${pageContext.request.contextPath}/book/deleteBook/${books.bookID}">删除</a>
+                            <a href="${pageContext.request.contextPath}/user/book/deleteBook/${books.bookID}">删除</a>
                         </td>
                     </tr>
                 </c:forEach>

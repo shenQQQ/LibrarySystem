@@ -12,8 +12,11 @@
 </a>
 
 <h1>
-    <a href="${pageContext.request.contextPath}/book/list">
+    <a href="${pageContext.request.contextPath}/user/book/listBook">
         进入书籍界面
+    </a>
+    <a href="${pageContext.request.contextPath}/user/student/listStudent">
+        进入学生界面
     </a>
 </h1>
 </body>

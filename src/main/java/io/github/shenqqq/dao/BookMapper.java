@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface BookMapper {
     int addBook(Books books);
-    int deleteBookById(@Param("bookId") int id);
+    int deleteBookById(@Param("bookID") int id);
     int updateBook(Books books);
-    Books queryBookById(@Param("bookId") int id);
+    Books queryBookById(@Param("bookID") int id);
     Books queryBookByName(@Param("bookName")String bookName);
     List<Books> queryAllBook();
 }

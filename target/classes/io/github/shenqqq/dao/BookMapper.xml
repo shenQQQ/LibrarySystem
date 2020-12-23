@@ -9,17 +9,17 @@
     </insert>
     
     <delete id="deleteBookById" parameterType="int">
-        delete from library.book where bookID = #{bookId}
+        delete from library.book where bookID = #{bookID}
     </delete>
 
-    <update id="update" parameterType="Books">
+    <update id="updateBook" parameterType="Books">
         update library.book set
         bookName=#{bookName},bookCounts=#{bookCounts},detail=#{detail}
-        where bookId=#{bookId}
+        where bookID=#{bookID}
     </update>
 
     <select id="queryBookById" resultType="Books">
-        select * from library.book where bookId=#{bookId}
+        select * from library.book where bookId=#{bookID}
     </select>
 
     <select id="queryAllBook" resultType="Books">

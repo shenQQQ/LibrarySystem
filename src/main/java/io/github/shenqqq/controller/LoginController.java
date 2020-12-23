@@ -14,19 +14,15 @@ public class LoginController {
     public String login(String username, Model model, HttpServletRequest request){
         HttpSession session = request.getSession();
         session.setAttribute("user", username);
-        System.out.println("username: " + username);
         if(username == null || username.equals("") )
         {
-            System.out.println("Controller使session为null");
             session.setAttribute("user", null);
             return "login";
         }
         if(username.equals("root"))
         {
-            System.out.println("是root");
             return "root";
         }
-        System.out.println("是user");
         return "user";
     }
 

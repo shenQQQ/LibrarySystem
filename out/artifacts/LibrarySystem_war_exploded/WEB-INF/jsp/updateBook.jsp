@@ -19,8 +19,8 @@
             </div>
         </div>
     </div>
-    <form action="${pageContext.request.contextPath}/book/updateBook" method="post">
-        <input type="hidden" name="bookId" value="${books.bookID}">
+    <form action="${pageContext.request.contextPath}/user/book/updateBook" method="post">
+        <input type="hidden" name="bookID" value="${books.bookID}">
         书籍名称：<input type="text" name="bookName" value="${books.bookName}" required><br><br><br>
         书籍数量：<input type="text" name="bookCounts" value="${books.bookCounts}" required><br><br><br>
         书籍详情：<input type="text" name="detail" value="${books.detail}" required><br><br><br>

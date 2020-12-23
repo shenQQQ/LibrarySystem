@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <form action="${pageContext.request.contextPath}/book/addBook" method="post">
+    <form action="${pageContext.request.contextPath}/user/book/addBook" method="post">
         书籍名称：<input type="text" name="bookName" required><br><br><br>
         书籍数量：<input type="text" name="bookCounts" required><br><br><br>
         书籍详情：<input type="text" name="detail" required><br><br><br>

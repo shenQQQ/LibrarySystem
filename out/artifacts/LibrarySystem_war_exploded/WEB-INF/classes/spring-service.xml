@@ -12,7 +12,10 @@
 
     <!--BookServiceImpl注入到IOC容器中-->
     <bean id="BookServiceImpl" class="io.github.shenqqq.service.BookServiceImpl">
-        <property name="bookMapper" ref="bookMapper"/>
+    <property name="bookMapper" ref="bookMapper"/>
+</bean>
+    <bean id="StudentServiceImpl" class="io.github.shenqqq.service.StudentServiceImpl">
+        <property name="studentMapper" ref="studentMapper"/>
     </bean>
 
     <!-- 配置事务管理器 -->
@@ -20,4 +23,5 @@
         <!-- 注入数据库连接池 -->
         <property name="dataSource" ref="dataSource" />
     </bean>
+
 </beans>
