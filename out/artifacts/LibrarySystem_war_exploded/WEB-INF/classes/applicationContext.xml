@@ -16,4 +16,9 @@
         <property name="mapperInterface" value="io.github.shenqqq.dao.StudentMapper"></property>
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>
+    <bean id="bookLogMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="io.github.shenqqq.dao.BookLogMapper"></property>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+    </bean>
+
 </beans>

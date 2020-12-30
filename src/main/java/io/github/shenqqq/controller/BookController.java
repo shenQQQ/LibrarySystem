@@ -17,7 +17,7 @@ import java.util.List;
 public class BookController {
     @Autowired
     @Qualifier("BookServiceImpl")
-    private BookService bookService;
+    BookService bookService;
 
     @RequestMapping("/listBook")
     public String list(Model model) {

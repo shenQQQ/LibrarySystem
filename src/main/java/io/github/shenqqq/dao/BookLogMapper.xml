@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.shenqqq.dao.BookLogMapper">
+    <insert id="addBookLog" parameterType="BookLogs">
+        insert into library.booklog(bookID,studentID)
+        values(#{bookID},#{studentID});
+    </insert>
+
+    <delete id="deleteBookLogById">
+        delete from library.booklog where bookID = #{bookID} AND studentID=#{studentID}
+    </delete>
+
+    <select id="queryBookLogById" resultType="BookLogs">
+        select * from library.booklog where bookID = #{bookID} AND studentID=#{studentID}
+    </select>
+
+    <select id="queryBookByBookId" resultType="BookLogs">
+        select * from library.booklog where bookId=#{bookID}
+    </select>
+
+    <select id="queryBookLogByStudentId" resultType="BookLogs">
+        select * from library.booklog where studentID=#{studentID}
+    </select>
+
+    <select id="queryAllBookLog" resultType="BookLogs">
+        select * from library.booklog
+    </select>
+
+</mapper>

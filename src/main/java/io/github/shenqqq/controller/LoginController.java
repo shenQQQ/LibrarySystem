@@ -9,8 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -32,7 +30,7 @@ public class LoginController {
         {
             return "root";
         }
-        Students students = studentService.queryStudentByName(username);
+        Students students = studentService.queryStudentById(username);
         if(students != null)
         {
 
@@ -46,7 +44,7 @@ public class LoginController {
     @RequestMapping("/goOut")
     public String goOut(HttpSession session){
         session.removeAttribute("user");
-        return "root";
+        return "login";
     }
 
     @RequestMapping("/goLogin")

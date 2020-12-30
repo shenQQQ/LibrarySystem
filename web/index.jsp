@@ -10,9 +10,11 @@
   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
   <body>
-  <h1 style="float: left">图书管理系统</h1>
-  <div style="float: right">
+  <div class="container">
+  <h1 style="float: left;margin-left:3%;margin-top:2%">图书管理系统</h1>
+  <div style="float: right;margin-right: 3%;margin-top: 2%">
     <a class="btn btn-primary" href="${pageContext.request.contextPath}/user/goLogin">登录</a>
+  </div>
   </div>
 </body>
 </html>
